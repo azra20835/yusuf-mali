@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dart Oyunu</title>
+
+<style>
+body{
+    margin:0;
+    background:#222;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+#oyun{
+    position:relative;
+    width:500px;
+    height:500px;
+}
+
+#tahta{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:10px solid black;
+}
+
+#ok{
+    position:absolute;
+    width:60px;
+    left:220px;
+    top:430px;
+    cursor:pointer;
+    transition:all 0.8s;
+}
+</style>
+</head>
+
+<body>
+
+<div id="oyun">
+
+<img id="tahta"
+src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Dartboard.svg">
+
+<img id="ok"
+src="https://cdn-icons-png.flaticon.com/512/32/32195.png">
+
+</div>
+
+<script>
+const ok = document.getElementById("ok");
+
+ok.addEventListener("click", ()=>{
+
+let x = Math.random()*300+100;
+let y = Math.random()*300+50;
+
+ok.style.left=x+"px";
+ok.style.top=y+"px";
+
+});
+</script>
+
+</body>
+</html>
